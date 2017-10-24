@@ -2,20 +2,29 @@
 
 #include "BaseWidget.h"
 
-//进度条控件，总进度值为100
 class SProgressBar : public BaseWidget
 {
+    Q_OBJECT
+
 public:
     SProgressBar(QWidget *parent = Q_NULLPTR);
     virtual ~SProgressBar();
 
-public:
-    //设置当前进度值，在0~100之间
-    void SetCurrentProgress(int currentProgress);
+signals:
+    void sliderMoved(int value);
+
+public slots:
+    void setMinimum(int value);
+    int minimum() const;
+    void setMaximum(int value);
+    int maximum() const;
+    void setValue(int value);
+    int value() const;
 
 protected:
     virtual void paintEvent(QPaintEvent *event);
+    virtual void mousePressEvent(QMouseEvent *event);
 
-public:
-    int m_currentProgress;
+private:
+    int m_currentProgress, min, max;
 };

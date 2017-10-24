@@ -14,7 +14,5 @@
         <file>Resource/sound.png</file>
         <file>Resource/full.png</file>
         <file>Resource/stop.png</file>
-        <file>Resource/backward.png</file>
-        <file>Resource/forward.png</file>
     </qresource>
 </RCC>

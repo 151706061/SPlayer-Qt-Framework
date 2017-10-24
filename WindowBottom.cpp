@@ -41,7 +41,7 @@ WindowBottom::WindowBottom(QWidget *parent):BaseWidget(parent)
 
     m_pProgressBar = new SProgressBar(this);
     m_pProgressBar->setFixedSize(60,4);
-    m_pProgressBar->SetCurrentProgress(50);
+    m_pProgressBar->setValue(500);
 
     m_pFull = new SButton(this);
     image = QImage(":/Image/Resource/full.png");

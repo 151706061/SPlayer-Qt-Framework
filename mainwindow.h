@@ -24,10 +24,6 @@ private:
     //创建Logo视图
     void CreateLogoWidget(QWidget *parent);
 
-protected:
-    //覆盖resizeEvent函数，用于手动定位控件位置
-    virtual void resizeEvent(QResizeEvent *event);
-
 protected slots:
     virtual void Slot_LogoClicked();
     void Slot_OptionActToggled(bool);
@@ -37,8 +33,6 @@ private:
     QWidget *m_pCenterWidget;
     LogoWidget *m_pLogoWidget;
     SProgressBar *m_pProgressBar;
-    SButton *m_pBackward;
-    SButton *m_pForward;
     WindowBottom *m_pWindowBottom;
     QMenu *m_pMainMenu;
     ConfigDialog *m_pConfigDialog;

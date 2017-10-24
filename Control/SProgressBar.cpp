@@ -1,8 +1,12 @@
 ﻿#include "SProgressBar.h"
-#include <QPainter>
 
-SProgressBar::SProgressBar(QWidget *parent):BaseWidget(parent)
-  ,m_currentProgress(0)
+#include <QPainter>
+#include <QMouseEvent>
+
+SProgressBar::SProgressBar(QWidget *parent) : BaseWidget(parent)
+  , m_currentProgress(0)
+  , min(0)
+  , max(1000)
 {
 
 }
@@ -12,11 +16,46 @@ SProgressBar::~SProgressBar()
 
 }
 
-void SProgressBar::SetCurrentProgress(int currentProgress)
+void SProgressBar::setMinimum(int value)
 {
-    m_currentProgress = currentProgress;
+    min = value;
+}
 
+int SProgressBar::minimum() const
+{
+    return min;
+}
+
+void SProgressBar::setMaximum(int value)
+{
+    max = value;
+}
+
+int SProgressBar::maximum() const
+{
+    return max;
+}
+
+void SProgressBar::setValue(int value)
+{
+    if (value <= min)
+    {
+        m_currentProgress = min;
+    }
+    else if (value >= max)
+    {
+        m_currentProgress = max;
+    }
+    else
+    {
+        m_currentProgress = value;
+    }
     update();
+}
+
+int SProgressBar::value() const
+{
+    return m_currentProgress;
 }
 
 void SProgressBar::paintEvent(QPaintEvent *event)
@@ -27,9 +66,29 @@ void SProgressBar::paintEvent(QPaintEvent *event)
     objPainter.fillRect(rect(),QColor(31,31,31));
     //绘内容区背景
     objPainter.fillRect(contentsRect(),QColor(78,78,78));
-    int nWidth = contentsRect().width() * m_currentProgress /100;
+    int range = max - min;
+    if (range <= 1)
+    {
+        range = 1;
+    }
+    int nWidth = static_cast<float>(contentsRect().width())
+            * static_cast<float>(m_currentProgress) / static_cast<float>(range);
     //绘进度条背景;
     objPainter.fillRect(contentsRect().x(),contentsRect().y(),nWidth,contentsRect().height(),QColor(26,158,255));
 
     BaseWidget::paintEvent(event);
+}
+
+void SProgressBar::mousePressEvent(QMouseEvent *event)
+{
+    int range = max - min;
+    if (range <= 1)
+    {
+        range = 1;
+    }
+    int value = (static_cast<float>(event->pos().x()) / static_cast<float>(width()))
+            * static_cast<float>(range);
+    setValue(value);
+    emit sliderMoved(value);
+    BaseWidget::mousePressEvent(event);
 }

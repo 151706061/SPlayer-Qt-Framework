@@ -33,7 +33,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
+VERSION = 1.0.0.0
 RC_ICONS = resource/Player.ico
+RC_LANG = 0x0004
+QMAKE_TARGET_COMPANY = "wangwenx190"
+QMAKE_TARGET_COPYRIGHT = "Copyright (C) 2017 by wangwenx190. All rights reserved."
+QMAKE_TARGET_DESCRIPTION = "SPlayer - Enjoy the simple life"
+QMAKE_TARGET_PRODUCT = "SPlayer"
 
 SOURCES += \
     main.cpp \

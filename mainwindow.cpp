@@ -22,25 +22,15 @@ MainWindow::MainWindow(QWidget *parent) : StandardDialog(parent)
     m_pCenterWidget = new QWidget(pCenterContainer);
     m_pCenterWidget->setMouseTracking(true);
     m_pProgressBar = new SProgressBar(pCenterContainer);
-    m_pProgressBar->SetCurrentProgress(50);
+    m_pProgressBar->setValue(500);
     m_pProgressBar->setFixedHeight(12);
-    m_pProgressBar->setContentsMargins(25,4,25,4);
+    m_pProgressBar->setContentsMargins(0,4,0,4);
     QVBoxLayout *pVBoxLayout = new QVBoxLayout(pCenterContainer);
     pVBoxLayout->setContentsMargins(0,0,0,0);
     pVBoxLayout->setSpacing(0);
     pVBoxLayout->addWidget(m_pCenterWidget);
     pVBoxLayout->addWidget(m_pProgressBar);
     SetCenterWidget(pCenterContainer);
-    //快进和快退按钮
-    QImage image;
-    m_pBackward = new SButton(this);
-    image = QImage(":/Image/Resource/backward.png");
-    m_pBackward->setFixedSize(image.width()/4,image.height());
-    m_pBackward->AppendImage(image);
-    m_pForward = new SButton(this);
-    image = QImage(":/Image/Resource/forward.png");
-    m_pForward->setFixedSize(image.width()/4,image.height());
-    m_pForward->AppendImage(image);
 
     CreateLogoWidget(m_pCenterWidget);
     //设置底部区域
@@ -81,13 +71,6 @@ void MainWindow::CreateLogoWidget(QWidget *parent)
     m_pLogoWidget = new LogoWidget(parent);
     m_pLogoWidget->SetLogoImage("./Image/logo.png");
     pLogoLayout->addWidget(m_pLogoWidget);
-}
-
-void MainWindow::resizeEvent(QResizeEvent *event)
-{
-    m_pBackward->move(5,height()-GetBottom()->height()-m_pBackward->height());
-    m_pForward->move(width()-m_pForward->width()-5,height()-GetBottom()->height()-m_pBackward->height());
-    StandardDialog::resizeEvent(event);
 }
 
 //单击Logo图标，弹出菜单
