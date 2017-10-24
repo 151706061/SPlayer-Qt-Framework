@@ -1,5 +1,6 @@
-﻿#ifndef SSTYLE_H
-#define SSTYLE_H
+﻿#pragma once
+
+#include <QString>
 
 class SStyle
 {
@@ -14,5 +15,3 @@ public:
 private:
     QString m_styleStr;
 };
-
-#endif // SSTYLE_H

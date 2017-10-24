@@ -1,5 +1,6 @@
 ﻿#include <QHBoxLayout>
 #include <QPainter>
+
 #include "StandardHeader.h"
 
 StandardHeader::StandardHeader(QWidget *parent) : BaseWidget(parent)
@@ -94,10 +95,9 @@ void StandardHeader::SetRestoreImage()
     m_pMax->ChangeImage(0,QImage(":/Image/Resource/headrestore.png"));
 }
 
-void StandardHeader::mouseDoubleClickEvent(QMouseEvent *event)
+QWidget *StandardHeader::getTitleBarLabel()
 {
-    emit Signal_MouseDoubleClicked();
-    BaseWidget::mouseDoubleClickEvent(event);
+    return m_pTitle;
 }
 
 void StandardHeader::CreateLayout()
@@ -112,7 +112,3 @@ void StandardHeader::CreateLayout()
     pHBoxLayout->addWidget(m_pMax);
     pHBoxLayout->addWidget(m_pClose);
 }
-
-
-
-

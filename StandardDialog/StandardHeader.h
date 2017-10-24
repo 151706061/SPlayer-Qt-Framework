@@ -1,6 +1,7 @@
 ﻿#pragma once
 
 #include <QLabel>
+#include <QWidget>
 
 #include "Control/BaseWidget.h"
 #include "Control/SButton.h"
@@ -8,6 +9,7 @@
 class StandardHeader : public BaseWidget
 {
     Q_OBJECT
+
 public:
     explicit StandardHeader(QWidget *parent = Q_NULLPTR);
     virtual ~StandardHeader();
@@ -22,9 +24,7 @@ public:
     void SetCloseVisible(bool bVisible);
     void SetMaxImage();
     void SetRestoreImage();
-
-protected:
-    virtual void mouseDoubleClickEvent(QMouseEvent *event);
+    QWidget *getTitleBarLabel();
 
 signals:
     void Signal_LogoClicked();
@@ -32,7 +32,6 @@ signals:
     void Signal_MinClicked();
     void Signal_MaxClicked();
     void Signal_CloseClicked();
-    void Signal_MouseDoubleClicked();
 
 private:
     void CreateLayout();

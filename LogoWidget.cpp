@@ -25,10 +25,12 @@ void LogoWidget::SetLogoImage(const QString &imageFilePath)
 
 void LogoWidget::paintEvent(QPaintEvent *event)
 {
-    QPainter painter(this);
-    painter.setRenderHint(QPainter::Antialiasing);
-    painter.drawImage(QPoint(0,0),m_logoImage.scaled(size()));
-
+    if (!m_logoImage.isNull())
+    {
+        QPainter painter(this);
+        painter.setRenderHint(QPainter::Antialiasing);
+        painter.drawImage(QPoint(0, 0), m_logoImage.scaled(size()));
+    }
     BaseWidget::paintEvent(event);
 }
 

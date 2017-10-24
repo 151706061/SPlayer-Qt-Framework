@@ -18,7 +18,7 @@ LIBS += \
 INCLUDEPATH += $$PWD
 DEPENDPATH += $$PWD
 
-PRECOMPILED_HEADER = PCH.h
+#PRECOMPILED_HEADER = PCH.h
 
 DESTDIR = $$PWD/bin
 
@@ -33,9 +33,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
+RC_ICONS = resource/Player.ico
 
 SOURCES += \
-    main.cpp\
+    main.cpp \
     mainwindow.cpp \
     StandardDialog/StandardDialog.cpp \
     StandardDialog/StandardHeader.cpp \
@@ -48,8 +49,8 @@ SOURCES += \
     WindowBottom.cpp \
     Control/SProgressBar.cpp \
     ConfigDialog.cpp \
-    DraggableWidget.cpp \
-    framelesswindow.cpp
+    Control/DraggableWidget.cpp \
+    Control/framelesswindow.cpp
 
 HEADERS += \
     mainwindow.h \
@@ -59,15 +60,15 @@ HEADERS += \
     Control/ObjectFourTuple.h \
     Control/SButton.h \
     WindowManager.h \
-    PCH.h \
+    #PCH.h \
     Style/SStyle.h \
     StandardDialog/StandardBottom.h \
     LogoWidget.h \
     WindowBottom.h \
     Control/SProgressBar.h \
     ConfigDialog.h \
-    DraggableWidget.h \
-    framelesswindow.h
+    Control/DraggableWidget.h \
+    Control/framelesswindow.h
 
 RESOURCES += \
     res.qrc

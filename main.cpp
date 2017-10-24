@@ -1,4 +1,7 @@
-﻿#include <QApplication>
+﻿#pragma execution_character_set("UTF-8")
+
+#include <QApplication>
+
 #include "mainwindow.h"
 #include "Style/SStyle.h"
 
@@ -6,7 +9,7 @@
 class SApplication : public QApplication
 {
 public:
-    SApplication(int &argc, char **argv):QApplication(argc,argv)
+    SApplication(int &argc, char **argv) : QApplication(argc,argv)
     {
     }
 
@@ -24,7 +27,7 @@ int main(int argc, char *argv[])
 {
     SApplication a(argc, argv);
     //设置应用系统的字体，如切换字体;
-    a.setFont(QFont("msyh"));
+    a.setFont(QFont("Microsoft YaHei"));
     //皮肤样式类;
     SStyle style;
     a.setStyleSheet(style.GetStyle());

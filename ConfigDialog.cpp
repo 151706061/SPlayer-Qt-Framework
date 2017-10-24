@@ -77,8 +77,6 @@ ConfigDialog::ConfigDialog(QWidget *parent):StandardDialog(parent)
     GetHeader()->setFixedHeight(40);
     GetBottom()->GetBgColor().SetAllState(QColor(56,58,66));
     GetBottom()->setFixedHeight(50);
-    //设置为不能对窗口进行伸缩
-    SetFixed(true);
 
     m_pConfigPage = new ConfigPage(this);
 

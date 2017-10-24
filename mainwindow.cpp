@@ -1,13 +1,15 @@
-﻿#include "mainwindow.h"
+﻿#pragma execution_character_set("UTF-8")
+
+#include "mainwindow.h"
+
 #include <QVBoxLayout>
+#include <QColor>
 
 #define MAIN_HB_COLOR (QColor(56,58,66))
 
 //构造函数
-MainWindow::MainWindow(QWidget *parent): StandardDialog(parent)
+MainWindow::MainWindow(QWidget *parent) : StandardDialog(parent)
 {
-    setWindowFlags(Qt::FramelessWindowHint);
-
     //设置头部区域属性
     GetHeader()->SetTitleText(tr("SPlayer"));
     GetHeader()->SetTitleCenter(true);
@@ -17,7 +19,7 @@ MainWindow::MainWindow(QWidget *parent): StandardDialog(parent)
     GetBottom()->setFixedHeight(65);
     //设置内容区域属性
     BaseWidget *pCenterContainer = new BaseWidget(this);
-    m_pCenterWidget = new QOpenGLWidget(pCenterContainer);
+    m_pCenterWidget = new QWidget(pCenterContainer);
     m_pCenterWidget->setMouseTracking(true);
     m_pProgressBar = new SProgressBar(pCenterContainer);
     m_pProgressBar->SetCurrentProgress(50);
@@ -51,7 +53,7 @@ MainWindow::MainWindow(QWidget *parent): StandardDialog(parent)
     m_pConfigDialog->setVisible(false);
 
     QSize size(860,500+30+65);
-    //setMinimumSize(size);//设置窗口最小大小
+    setMinimumSize(size);//设置窗口最小大小
     resize(size);
 }
 
