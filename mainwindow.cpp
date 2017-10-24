@@ -1,4 +1,4 @@
-#include "mainwindow.h"
+﻿#include "mainwindow.h"
 #include <QVBoxLayout>
 
 #define MAIN_HB_COLOR (QColor(56,58,66))

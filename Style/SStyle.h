@@ -1,4 +1,4 @@
-#ifndef SSTYLE_H
+﻿#ifndef SSTYLE_H
 #define SSTYLE_H
 
 class SStyle

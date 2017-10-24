@@ -1,4 +1,4 @@
-#include "WindowBottom.h"
+﻿#include "WindowBottom.h"
 
 //播放、停止等主界面底部视图的效果呈现
 WindowBottom::WindowBottom(QWidget *parent):BaseWidget(parent)

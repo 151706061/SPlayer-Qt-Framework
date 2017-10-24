@@ -1,4 +1,4 @@
-#include "SStyle.h"
+﻿#include "SStyle.h"
 #include <QFile>
 #include <QTextStream>
 

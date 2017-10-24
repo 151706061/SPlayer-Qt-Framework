@@ -1,4 +1,4 @@
-#include "SProgressBar.h"
+﻿#include "SProgressBar.h"
 #include <QPainter>
 
 SProgressBar::SProgressBar(QWidget *parent):BaseWidget(parent)

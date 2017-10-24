@@ -1,4 +1,4 @@
-#ifndef LOGOWIDGET_H
+﻿#ifndef LOGOWIDGET_H
 #define LOGOWIDGET_H
 
 #include "Control/BaseWidget.h"

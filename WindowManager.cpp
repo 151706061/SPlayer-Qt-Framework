@@ -1,4 +1,4 @@
-#include "WindowManager.h"
+﻿#include "WindowManager.h"
 
 WindowManager::WindowManager():m_pMainWindow(NULL)
 {

@@ -1,4 +1,4 @@
-#ifndef SBUTTON_H
+﻿#ifndef SBUTTON_H
 #define SBUTTON_H
 
 #include "BaseWidget.h"

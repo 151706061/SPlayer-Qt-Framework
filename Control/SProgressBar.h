@@ -1,4 +1,4 @@
-#ifndef SPROGRESSBAR_H
+﻿#ifndef SPROGRESSBAR_H
 #define SPROGRESSBAR_H
 
 #include "BaseWidget.h"

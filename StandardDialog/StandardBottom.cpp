@@ -1,4 +1,4 @@
-#include "StandardBottom.h"
+﻿#include "StandardBottom.h"
 
 StandardBottom::StandardBottom(QWidget *parent):BaseWidget(parent)
 {

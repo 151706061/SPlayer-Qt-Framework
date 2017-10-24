@@ -1,4 +1,4 @@
-#include "LogoWidget.h"
+﻿#include "LogoWidget.h"
 #include <QPainter>
 
 LogoWidget::LogoWidget(QWidget *parent):BaseWidget(parent)

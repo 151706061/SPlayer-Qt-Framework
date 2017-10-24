@@ -1,4 +1,4 @@
-#include "BaseWidget.h"
+﻿#include "BaseWidget.h"
 #include <QPainter>
 
 BaseWidget::BaseWidget(QWidget *parent) : QWidget(parent)

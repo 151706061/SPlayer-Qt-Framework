@@ -1,4 +1,4 @@
-#ifndef STANDARDDIALOG_H
+﻿#ifndef STANDARDDIALOG_H
 #define STANDARDDIALOG_H
 
 #include <QVBoxLayout>

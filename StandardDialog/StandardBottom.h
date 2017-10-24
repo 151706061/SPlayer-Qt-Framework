@@ -1,4 +1,4 @@
-#ifndef STANDARDBOTTOM_H
+﻿#ifndef STANDARDBOTTOM_H
 #define STANDARDBOTTOM_H
 
 #include <QHBoxLayout>

@@ -1,4 +1,4 @@
-#ifndef WINDOWBOTTOM_H
+﻿#ifndef WINDOWBOTTOM_H
 #define WINDOWBOTTOM_H
 
 #include <QLabel>

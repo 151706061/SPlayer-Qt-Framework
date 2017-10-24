@@ -1,4 +1,4 @@
-#include <QHBoxLayout>
+﻿#include <QHBoxLayout>
 #include <QPainter>
 #include "StandardHeader.h"
 

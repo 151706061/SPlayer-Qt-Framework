@@ -1,4 +1,4 @@
-#include "SButton.h"
+﻿#include "SButton.h"
 #include <QPainter>
 #include <QMouseEvent>
 

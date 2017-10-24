@@ -1,4 +1,4 @@
-#include "ConfigDialog.h"
+﻿#include "ConfigDialog.h"
 #include <QVBoxLayout>
 
 ConfigPage::ConfigPage(QWidget *parent):BaseWidget(parent)

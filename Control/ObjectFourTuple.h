@@ -1,4 +1,4 @@
-#ifndef OBJECTFOURTUPLE_H
+﻿#ifndef OBJECTFOURTUPLE_H
 #define OBJECTFOURTUPLE_H
 
 

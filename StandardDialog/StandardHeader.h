@@ -1,4 +1,4 @@
-#ifndef STANDARDHEADER_H
+﻿#ifndef STANDARDHEADER_H
 #define STANDARDHEADER_H
 
 #include <QLabel>
