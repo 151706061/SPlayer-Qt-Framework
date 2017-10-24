@@ -1,15 +1,15 @@
-﻿#ifndef CONFIGDIALOG_H
-#define CONFIGDIALOG_H
+﻿#pragma once
 
 #include <QTabWidget>
 #include <QPushButton>
+
 #include "StandardDialog/StandardDialog.h"
 #include "Control/BaseWidget.h"
 
 class ConfigPage : public BaseWidget
 {
 public:
-    ConfigPage(QWidget *parent = 0);
+    ConfigPage(QWidget *parent = Q_NULLPTR);
     virtual ~ConfigPage();
 private:
     QTabWidget *m_pTabWidget;
@@ -32,12 +32,10 @@ class ConfigDialog : public StandardDialog
 {
 
 public:
-    ConfigDialog(QWidget *parent = 0);
+    ConfigDialog(QWidget *parent = Q_NULLPTR);
     virtual ~ConfigDialog();
 
 private:
     ConfigPage *m_pConfigPage;
     ConfigBottom *m_pConfigBottom;
 };
-
-#endif // CONFIGDIALOG_H

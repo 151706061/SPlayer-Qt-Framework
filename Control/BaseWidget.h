@@ -1,15 +1,18 @@
-﻿#ifndef BASEWIDGET_H
-#define BASEWIDGET_H
+﻿#pragma once
 
 #include <QWidget>
+#include <QColor>
+#include <QPen>
+
 #include "ObjectFourTuple.h"
 
 //控件基类，用于公共属性、公共行为的抽象
 class BaseWidget : public QWidget
 {
     Q_OBJECT
+
 public:
-    explicit BaseWidget(QWidget *parent = 0);
+    explicit BaseWidget(QWidget *parent = Q_NULLPTR);
     virtual ~BaseWidget();
 
     //信号定义
@@ -40,5 +43,3 @@ protected:
     bool m_bEnter;
     bool m_bPress;
 };
-
-#endif // BASEWIDGET_H

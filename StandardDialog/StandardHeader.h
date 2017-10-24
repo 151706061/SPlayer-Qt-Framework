@@ -1,7 +1,7 @@
-﻿#ifndef STANDARDHEADER_H
-#define STANDARDHEADER_H
+﻿#pragma once
 
 #include <QLabel>
+
 #include "Control/BaseWidget.h"
 #include "Control/SButton.h"
 
@@ -9,7 +9,7 @@ class StandardHeader : public BaseWidget
 {
     Q_OBJECT
 public:
-    explicit StandardHeader(QWidget *parent = 0);
+    explicit StandardHeader(QWidget *parent = Q_NULLPTR);
     virtual ~StandardHeader();
 
 public:
@@ -46,5 +46,3 @@ private:
     SButton *m_pClose;
     QColor m_backgroundColor;
 };
-
-#endif // STANDARDHEADER_H

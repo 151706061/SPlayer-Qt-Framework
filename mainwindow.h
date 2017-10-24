@@ -1,8 +1,8 @@
-﻿#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+﻿#pragma once
 
-#include <QOpenGLWidget>
+#include <QWidget>
 #include <QMenu>
+
 #include "StandardDialog/StandardDialog.h"
 #include "LogoWidget.h"
 #include "Control/SProgressBar.h"
@@ -15,7 +15,7 @@ class MainWindow : public StandardDialog
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = 0);
+    MainWindow(QWidget *parent = Q_NULLPTR);
     ~MainWindow();
 
 private:
@@ -34,7 +34,7 @@ protected slots:
 
     //控件成员
 private:
-    QOpenGLWidget *m_pCenterWidget;
+    QWidget *m_pCenterWidget;
     LogoWidget *m_pLogoWidget;
     SProgressBar *m_pProgressBar;
     SButton *m_pBackward;
@@ -43,4 +43,3 @@ private:
     QMenu *m_pMainMenu;
     ConfigDialog *m_pConfigDialog;
 };
-#endif // MAINWINDOW_H

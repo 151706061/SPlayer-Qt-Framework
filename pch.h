@@ -1,8 +1,11 @@
-﻿#ifndef PCH_H
-#define PCH_H
+﻿#pragma once
+
+#pragma execution_character_set("UTF-8")
 
 #include <QtCore>
 #include <QtGui>
 #include <QtWidgets>
 
-#endif // PCH_H
+#ifdef _DEBUG
+#include <QDebug>
+#endif

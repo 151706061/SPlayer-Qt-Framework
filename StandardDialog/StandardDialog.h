@@ -1,7 +1,7 @@
-﻿#ifndef STANDARDDIALOG_H
-#define STANDARDDIALOG_H
+﻿#pragma once
 
 #include <QVBoxLayout>
+
 #include "StandardHeader.h"
 #include "StandardBottom.h"
 #include "Control/BaseWidget.h"
@@ -11,7 +11,7 @@ class StandardDialog : public BaseWidget
     Q_OBJECT
 
 public:
-    explicit StandardDialog(QWidget *parent = 0);
+    explicit StandardDialog(QWidget *parent = Q_NULLPTR);
     virtual ~StandardDialog();
 
 public:
@@ -48,5 +48,3 @@ private:
     QPoint m_sourcePos;
     bool m_bFixedSize;
 };
-
-#endif // STANDARDDIALOG_H

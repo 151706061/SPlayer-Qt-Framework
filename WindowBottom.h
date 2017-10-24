@@ -1,7 +1,7 @@
-﻿#ifndef WINDOWBOTTOM_H
-#define WINDOWBOTTOM_H
+﻿#pragma once
 
 #include <QLabel>
+
 #include "Control/SButton.h"
 #include "Control/SProgressBar.h"
 #include "Control/BaseWidget.h"
@@ -29,5 +29,3 @@ private:
     SProgressBar *m_pProgressBar;
     SButton *m_pFull;
 };
-
-#endif // WINDOWBOTTOM_H

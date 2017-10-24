@@ -1,6 +1,4 @@
-﻿#ifndef OBJECTFOURTUPLE_H
-#define OBJECTFOURTUPLE_H
-
+﻿#pragma once
 
 template<typename T>
 class ObjectFourTuple
@@ -62,5 +60,3 @@ private:
     T m_pressState;
     T m_disableState;
 };
-
-#endif // OBJECTFOURTUPLE_H

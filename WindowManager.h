@@ -1,5 +1,5 @@
-﻿#ifndef WINDOWMANAGER_H
-#define WINDOWMANAGER_H
+﻿#pragma once
+
 #include "mainwindow.h"
 
 //窗口管理类，可用于后期扩展使用
@@ -19,5 +19,3 @@ public:
 private:
     MainWindow *m_pMainWindow;
 };
-
-#endif // WINDOWMANAGER_H

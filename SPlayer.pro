@@ -1,21 +1,26 @@
-﻿#-------------------------------------------------
+#-------------------------------------------------
 #
 # Project created by QtCreator 2017-04-23T18:07:10
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = SPlayer
 TEMPLATE = app
 
-INCLUDEPATH = ./
+LIBS += \
+    -lDwmapi \
+    -lUser32
 
-PRECOMPILED_HEADER  = PCH.h
+INCLUDEPATH += $$PWD
+DEPENDPATH += $$PWD
 
-DESTDIR += $$PWD/Bin/
+PRECOMPILED_HEADER = PCH.h
+
+DESTDIR = $$PWD/bin
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which as been marked as deprecated (the exact warnings
@@ -29,8 +34,9 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 
-SOURCES += main.cpp\
-        mainwindow.cpp \
+SOURCES += \
+    main.cpp\
+    mainwindow.cpp \
     StandardDialog/StandardDialog.cpp \
     StandardDialog/StandardHeader.cpp \
     Control/BaseWidget.cpp \
@@ -41,22 +47,27 @@ SOURCES += main.cpp\
     LogoWidget.cpp \
     WindowBottom.cpp \
     Control/SProgressBar.cpp \
-    ConfigDialog.cpp
+    ConfigDialog.cpp \
+    DraggableWidget.cpp \
+    framelesswindow.cpp
 
-HEADERS  += mainwindow.h \
+HEADERS += \
+    mainwindow.h \
     StandardDialog/StandardDialog.h \
     StandardDialog/StandardHeader.h \
     Control/BaseWidget.h \
     Control/ObjectFourTuple.h \
     Control/SButton.h \
     WindowManager.h \
-    pch.h \
+    PCH.h \
     Style/SStyle.h \
     StandardDialog/StandardBottom.h \
     LogoWidget.h \
     WindowBottom.h \
     Control/SProgressBar.h \
-    ConfigDialog.h
+    ConfigDialog.h \
+    DraggableWidget.h \
+    framelesswindow.h
 
 RESOURCES += \
     res.qrc

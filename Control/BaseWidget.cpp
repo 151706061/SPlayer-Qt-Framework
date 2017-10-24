@@ -1,10 +1,11 @@
 ﻿#include "BaseWidget.h"
+
 #include <QPainter>
 
 BaseWidget::BaseWidget(QWidget *parent) : QWidget(parent)
-  ,m_margin(0,0,0,0)
-  ,m_bEnter(false)
-  ,m_bPress(false)
+  , m_margin(0, 0, 0, 0)
+  , m_bEnter(false)
+  , m_bPress(false)
 {
     setMouseTracking(true);
 }

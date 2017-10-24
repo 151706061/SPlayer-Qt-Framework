@@ -1,5 +1,4 @@
-﻿#ifndef LOGOWIDGET_H
-#define LOGOWIDGET_H
+﻿#pragma once
 
 #include "Control/BaseWidget.h"
 #include "Control/SButton.h"
@@ -7,7 +6,7 @@
 class LogoWidget : public BaseWidget
 {
 public:
-    LogoWidget(QWidget *parent = 0);
+    LogoWidget(QWidget *parent = Q_NULLPTR);
     virtual ~LogoWidget();
 
 public:
@@ -22,5 +21,3 @@ private:
     SButton *m_pOpenFile;
 
 };
-
-#endif // LOGOWIDGET_H

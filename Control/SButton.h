@@ -1,5 +1,4 @@
-﻿#ifndef SBUTTON_H
-#define SBUTTON_H
+﻿#pragma once
 
 #include "BaseWidget.h"
 
@@ -7,7 +6,7 @@
 class SButton : public BaseWidget
 {
 public:
-    SButton(QWidget *parent = 0);
+    SButton(QWidget *parent = Q_NULLPTR);
     virtual ~SButton();
 
     //增加以及替换图片
@@ -23,5 +22,3 @@ protected:
 private:
     QList<QImage> m_listImage;
 };
-
-#endif // SBUTTON_H

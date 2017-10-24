@@ -1,5 +1,4 @@
-﻿#ifndef SPROGRESSBAR_H
-#define SPROGRESSBAR_H
+﻿#pragma once
 
 #include "BaseWidget.h"
 
@@ -7,7 +6,7 @@
 class SProgressBar : public BaseWidget
 {
 public:
-    SProgressBar(QWidget *parent = 0);
+    SProgressBar(QWidget *parent = Q_NULLPTR);
     virtual ~SProgressBar();
 
 public:
@@ -20,5 +19,3 @@ protected:
 public:
     int m_currentProgress;
 };
-
-#endif // SPROGRESSBAR_H
