@@ -37,7 +37,7 @@ public:
     //by default, we will auto adjust margins, to avoid the window content extend OUT of screen when maximized
     //but when the window restore to normal size, a twinkle will occur
     //if you want to avoid twinkle, set auto adjust margin to false
-    void setAutoAdjustMargins(bool bAutoAdust = true);
+    void setAutoAdjustMargins(bool bAutoAdjust = true);
 
 protected:
     //设置一个标题栏widget，此widget会被当做标题栏对待
