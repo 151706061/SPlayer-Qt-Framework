@@ -1,10 +1,13 @@
 ﻿#pragma once
 
-//A nice frameless window for both Windows and OSX
-//Author: Bringer-of-Light
-//Github: https://github.com/Bringer-of-Light/Qt-Nice-Frameless-Window
-// Usage: use "CFramelessWindow" as base class instead of "QWidget", and enjoy
-//
+/*************************************************************************************
+ * Frameless draggable Qt window(QWidget) for Windows                                *
+ * Original author: Bringer-of-Light(seo)                                            *
+ * Modified by: wangwenx190                                                          *
+ * Original repository: https://github.com/Bringer-of-Light/Qt-Nice-Frameless-Window *
+ * Current repository: https://github.com/wangwenx190/Qt-Frameless-Draggable-Window  *
+ * Usage: use "CFramelessWindow" as base class instead of "QWidget", and enjoy       *
+ *************************************************************************************/
 
 #include "qsystemdetection.h"
 #include <QObject>
