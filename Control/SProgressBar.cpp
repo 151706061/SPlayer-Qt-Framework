@@ -19,6 +19,7 @@ SProgressBar::~SProgressBar()
 void SProgressBar::setMinimum(int value)
 {
     min = value;
+    emit rangeChanged(min, max);
 }
 
 int SProgressBar::minimum() const
@@ -29,11 +30,23 @@ int SProgressBar::minimum() const
 void SProgressBar::setMaximum(int value)
 {
     max = value;
+    emit rangeChanged(min, max);
 }
 
 int SProgressBar::maximum() const
 {
     return max;
+}
+
+void SProgressBar::setRange(int min_value, int max_value)
+{
+    if (min_value >= max_value)
+    {
+        return;
+    }
+    min = min_value;
+    max = max_value;
+    emit rangeChanged(min, max);
 }
 
 void SProgressBar::setValue(int value)
@@ -51,6 +64,7 @@ void SProgressBar::setValue(int value)
         m_currentProgress = value;
     }
     update();
+    emit sliderMoved(value);
 }
 
 int SProgressBar::value() const
@@ -89,6 +103,5 @@ void SProgressBar::mousePressEvent(QMouseEvent *event)
     int value = (static_cast<float>(event->pos().x()) / static_cast<float>(width()))
             * static_cast<float>(range);
     setValue(value);
-    emit sliderMoved(value);
     BaseWidget::mousePressEvent(event);
 }
