@@ -48,9 +48,7 @@ SOURCES += \
     LogoWidget.cpp \
     WindowBottom.cpp \
     Control/SProgressBar.cpp \
-    ConfigDialog.cpp \
-    Control/DraggableWidget.cpp \
-    Control/framelesswindow.cpp
+    ConfigDialog.cpp
 
 HEADERS += \
     mainwindow.h \
@@ -65,9 +63,7 @@ HEADERS += \
     LogoWidget.h \
     WindowBottom.h \
     Control/SProgressBar.h \
-    ConfigDialog.h \
-    Control/DraggableWidget.h \
-    Control/framelesswindow.h
+    ConfigDialog.h
 
 RESOURCES += \
     res.qrc
