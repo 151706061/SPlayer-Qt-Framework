@@ -4,7 +4,7 @@
 
 #include "StandardHeader.h"
 #include "StandardBottom.h"
-#include "Control/framelesswindow.h"
+#include "framelesswindow.h"
 
 class StandardDialog : public CFramelessWindow
 {
