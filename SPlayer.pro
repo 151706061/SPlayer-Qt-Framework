@@ -11,14 +11,8 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = SPlayer
 TEMPLATE = app
 
-LIBS += \
-    -lDwmapi \
-    -lUser32
-
 INCLUDEPATH += $$PWD
 DEPENDPATH += $$PWD
-
-#PRECOMPILED_HEADER = PCH.h
 
 DESTDIR = $$PWD/bin
 
@@ -66,7 +60,6 @@ HEADERS += \
     Control/ObjectFourTuple.h \
     Control/SButton.h \
     WindowManager.h \
-    #PCH.h \
     Style/SStyle.h \
     StandardDialog/StandardBottom.h \
     LogoWidget.h \
