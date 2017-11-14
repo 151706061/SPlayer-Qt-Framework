@@ -106,7 +106,7 @@ void StandardDialog::SetBottomWidget(QWidget *pBottomWidget)
 
 void StandardDialog::mousePressEvent(QMouseEvent *event)
 {
-    if (event->button() == Qt::LeftButton)
+    if ((event->button() == Qt::LeftButton) && !isMaximized())
     {
         m_bPressed = true;
         m_sourcePos = event->globalPos();
@@ -129,7 +129,7 @@ void StandardDialog::mouseReleaseEvent(QMouseEvent *event)
 //实现拖动窗口效果
 void StandardDialog::mouseMoveEvent(QMouseEvent *event)
 {
-    if(m_bPressed)
+    if(m_bPressed && !isMaximized())
     {
         if(!m_sourcePos.isNull())//移动窗口
         {
