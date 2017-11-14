@@ -26,6 +26,9 @@ protected slots:
     virtual void Slot_CloseClicked();
 
 protected:
+    virtual void mousePressEvent(QMouseEvent *event);
+    virtual void mouseMoveEvent(QMouseEvent *event);
+    virtual void mouseReleaseEvent(QMouseEvent *event);
     void SetCenterWidget(QWidget *pCenterWidget);
     void SetBottomWidget(QWidget *pBottomWidget);
 
@@ -33,4 +36,6 @@ private:
     StandardHeader *m_pHeader;
     StandardBottom *m_pBottom;
     QVBoxLayout *m_pVBoxLayout;
+    QPoint m_sourcePos;
+    bool m_bPressed;
 };

@@ -6,7 +6,7 @@
 SStyle::SStyle()
 {
     //读取皮肤样式文本
-    QFile skinFile("Skin/skin_default.skin");
+    QFile skinFile(":/QSS/Resource/default.qss");
     skinFile.open(QIODevice::ReadOnly | QIODevice::Text);
     QTextStream ts(&skinFile);
     m_styleStr = ts.readAll();

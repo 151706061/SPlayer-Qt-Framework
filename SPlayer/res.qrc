@@ -14,5 +14,9 @@
         <file>Resource/sound.png</file>
         <file>Resource/full.png</file>
         <file>Resource/stop.png</file>
+        <file>Resource/logo.png</file>
+    </qresource>
+    <qresource prefix="/QSS">
+        <file>Resource/default.qss</file>
     </qresource>
 </RCC>

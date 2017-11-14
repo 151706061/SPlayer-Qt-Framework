@@ -44,7 +44,7 @@ MainWindow::MainWindow(QWidget *parent) : StandardDialog(parent)
 
     QSize size(860,500+30+65);
     setMinimumSize(size);//设置窗口最小大小
-    resize(size);
+    resize(900, 650);
 }
 
 MainWindow::~MainWindow()
@@ -69,7 +69,7 @@ void MainWindow::CreateLogoWidget(QWidget *parent)
     pLogoLayout->setContentsMargins(0,0,0,0);
     pLogoLayout->setSpacing(0);
     m_pLogoWidget = new LogoWidget(parent);
-    m_pLogoWidget->SetLogoImage("./Image/logo.png");
+    m_pLogoWidget->SetLogoImage(":/Image/Resource/logo.png");
     pLogoLayout->addWidget(m_pLogoWidget);
 }
 

@@ -40,10 +40,4 @@ CMakeLists.txt.user*
 # My
 
 Thumbs.db
-*.exe
-*.qm
-bin/iconengines/
-bin/imageformats/
-bin/platforms/
-bin/translations/
-bin/plugins/
+[Bb]in/
