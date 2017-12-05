@@ -13,7 +13,7 @@ SPlayer项目的Qt界面代码，界面是用纯代码实现的，没有借助Qt
 - **请尽量使用最新版的MSVC编译器，并安装最新版的Windows SDK。MinGW及其他编译环境未测试，无法保证一定能编译通过。我只用VS，VS下有问题可以一起探讨，其他环境下出现问题不要找我。**
 
 ## 克隆或下载
-1. Git命令行克隆**【推荐】**
+1. Git命令行克隆【**推荐**】
 
 ```text
 git clone --recursive https://github.com/wangwenx190/SPlayer-Qt-Framework.git
@@ -38,7 +38,7 @@ git submodule foreach --recursive git fetch --tags
 git submodule update --init --recursive
 ```
 
-2. 浏览器直接下载**【不推荐】**
+2. 浏览器直接下载【**不推荐**】
 
 您可以直接用浏览器下载GitHub提供的压缩包，但这个压缩包是不包含子模块的，请您自行下载对应版本的子模块后解压到正确的位置。
 
